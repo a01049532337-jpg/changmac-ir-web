@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /private
+
+Sitemap: https://changmac.com/sitemap.xml
