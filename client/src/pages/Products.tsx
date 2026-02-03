@@ -316,20 +316,7 @@ export default function Products() {
               일관된 고품질 제품을 생산합니다. 실시간 품질 모니터링과 공정 최적화로 
               고객 만족도를 극대화합니다.
             </p>
-            <div className="grid md:grid-cols-3 gap-4">
-              <div className="bg-white rounded-lg p-4">
-                <p className="text-sm text-gray-600 mb-1">생산 효율</p>
-                <p className="text-2xl font-bold text-blue-700">35% ↑</p>
-              </div>
-              <div className="bg-white rounded-lg p-4">
-                <p className="text-sm text-gray-600 mb-1">품질 편차</p>
-                <p className="text-2xl font-bold text-blue-700">50% ↓</p>
-              </div>
-              <div className="bg-white rounded-lg p-4">
-                <p className="text-sm text-gray-600 mb-1">에너지 효율</p>
-                <p className="text-2xl font-bold text-blue-700">35% ↑</p>
-              </div>
-            </div>
+
           </div>
         </div>
       </section>

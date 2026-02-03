@@ -17,7 +17,7 @@ export default function Footer() {
             <div className="space-y-3 text-gray-300">
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-lime-400 flex-shrink-0 mt-1" />
-                <p>경상북도 성주군 선남면 관화길 58-25</p>
+                <p>경상북도 성주군 선남면 선노로 55-36</p>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-lime-400 flex-shrink-0" />

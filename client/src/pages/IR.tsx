@@ -84,6 +84,14 @@ export default function IR() {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Navigation */}
+      <nav className="sticky top-0 z-40 bg-white border-b border-gray-200">
+        <div className="container flex items-center justify-between h-16">
+          <a href="/" className="text-2xl font-bold text-blue-700">창맥</a>
+          <a href="/" className="text-blue-700 hover:text-blue-800">← 돌아가기</a>
+        </div>
+      </nav>
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-blue-700 to-blue-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 opacity-10">

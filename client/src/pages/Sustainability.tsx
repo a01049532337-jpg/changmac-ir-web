@@ -147,7 +147,7 @@ export default function Sustainability() {
       <section className="relative text-white py-24 md:py-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://private-us-east-1.manuscdn.com/sessionFile/x3J7qhmfKNtJ15WezGjR6C/sandbox/uRCXYl57SGjJzhPNUPi94y-img-1_1770093624000_na1fn_c3VzdGFpbmFiaWxpdHktdmlzaW9u.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUveDNKN3FobWZLTnRKMTVXZXpHalI2Qy9zYW5kYm94L3VSQ1hZbDU3U0dqSnpoUE5VUGk5NHktaW1nLTFfMTc3MDA5MzYyNDAwMF9uYTFmbl9jM1Z6ZEdGcGJtRmlhV3hwZEhrdGRtbHphVzl1LmpwZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=N4o3K0uzX37oAo9KDNEgRCM-6CIWjfNlhX0eY96oR~fwR1dODISpdpvgU2rc46IhIDLKZI2oGyWpLEhqAkY365ecc-gnQ0KDXc0qrw92snGn5q8JD5mfnZ9GLU85Teb-AU36V0HQ138NRKQKCq0jvSahiEXxUmctbKIzw2ulrGQ2my61ZmA29EWaydnbVElxFbcQkK6tzYN3IqxRW2ep9QibHQeXcPN2KCx3zViFSCDvbxPYSaepH35HLyDSkw3U0ChoqEdz72SQJyHHRxF82O-HITrHFpPxWw2i16qrj18F0i3DsrcKiJP6XIYxtpHWRaqTEPHsBJvffsPD6TLCkQ__" 
+            src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663320104260/dsmUceotfjVoRwPp.png" 
             alt="Sustainability Vision" 
             className="w-full h-full object-cover opacity-30"
           />
