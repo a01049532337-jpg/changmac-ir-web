@@ -19,7 +19,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   }, [isOpen]);
 
   const menuItems = [
-    { label: "회사소개", href: "#about" },
+    { label: "회사소개", href: "/about" },
     { label: "사업소개", href: "#products" },
     { label: "지속가능경영", href: "#sustainability" },
     { label: "IR", href: "#ir" },
@@ -59,7 +59,10 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             <a
               key={item.href}
               href={item.href}
-              onClick={onClose}
+              onClick={() => {
+                onClose();
+                window.scrollTo(0, 0);
+              }}
               className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-700 rounded-lg transition font-medium"
             >
               {item.label}
