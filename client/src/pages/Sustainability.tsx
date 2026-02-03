@@ -143,8 +143,16 @@ export default function Sustainability() {
       </nav>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-green-700 to-blue-900 text-white py-16 md:py-24">
-        <div className="container">
+      <section className="relative text-white py-24 md:py-32 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://private-us-east-1.manuscdn.com/sessionFile/x3J7qhmfKNtJ15WezGjR6C/sandbox/uRCXYl57SGjJzhPNUPi94y-img-1_1770093624000_na1fn_c3VzdGFpbmFiaWxpdHktdmlzaW9u.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUveDNKN3FobWZLTnRKMTVXZXpHalI2Qy9zYW5kYm94L3VSQ1hZbDU3U0dqSnpoUE5VUGk5NHktaW1nLTFfMTc3MDA5MzYyNDAwMF9uYTFmbl9jM1Z6ZEdGcGJtRmlhV3hwZEhrdGRtbHphVzl1LmpwZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=N4o3K0uzX37oAo9KDNEgRCM-6CIWjfNlhX0eY96oR~fwR1dODISpdpvgU2rc46IhIDLKZI2oGyWpLEhqAkY365ecc-gnQ0KDXc0qrw92snGn5q8JD5mfnZ9GLU85Teb-AU36V0HQ138NRKQKCq0jvSahiEXxUmctbKIzw2ulrGQ2my61ZmA29EWaydnbVElxFbcQkK6tzYN3IqxRW2ep9QibHQeXcPN2KCx3zViFSCDvbxPYSaepH35HLyDSkw3U0ChoqEdz72SQJyHHRxF82O-HITrHFpPxWw2i16qrj18F0i3DsrcKiJP6XIYxtpHWRaqTEPHsBJvffsPD6TLCkQ__" 
+            alt="Sustainability Vision" 
+            className="w-full h-full object-cover opacity-30"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-green-900/90 to-blue-900/90"></div>
+        </div>
+        <div className="container relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">지속가능경영</h1>
           <p className="text-lg text-green-100 max-w-2xl">
             (주)창맥은 환경, 사회, 지배구조(ESG)의 균형 있는 발전을 통해 
@@ -329,9 +337,11 @@ export default function Sustainability() {
             진정한 순환경제를 실현하고, 모든 이해관계자와 함께 
             지속가능한 미래를 만들어가겠습니다.
           </p>
-          <Button className="bg-lime-400 text-green-900 hover:bg-lime-500 text-lg px-8 py-6">
-            지금 문의하기
-          </Button>
+          <a href="mailto:changmaec1@naver.com">
+            <Button className="bg-lime-400 text-green-900 hover:bg-lime-500 text-lg px-8 py-6">
+              지금 문의하기
+            </Button>
+          </a>
         </div>
       </section>
 

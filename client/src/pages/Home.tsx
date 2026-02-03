@@ -35,7 +35,9 @@ export default function Home() {
           </button>
 
           {/* Desktop CTA Button */}
-          <Button className="hidden md:block bg-blue-700 hover:bg-blue-800">문의하기</Button>
+          <a href="mailto:changmaec1@naver.com">
+            <Button className="hidden md:block bg-blue-700 hover:bg-blue-800">문의하기</Button>
+          </a>
         </div>
       </nav>
 
@@ -56,12 +58,16 @@ export default function Home() {
               16년의 업력, 특허 기술 기반의 고품질 재생수지 전문 제조 기업
             </p>
             <div className="flex gap-4">
-              <Button className="bg-lime-400 text-blue-900 hover:bg-lime-500">
-                제품 보기
-              </Button>
-              <Button variant="outline" className="border-white text-white hover:bg-white/10">
-                회사소개 <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
+              <a href="/products">
+                <Button className="bg-lime-400 text-blue-900 hover:bg-lime-500">
+                  제품 보기
+                </Button>
+              </a>
+              <a href="/about">
+                <Button variant="outline" className="border-white text-white hover:bg-white/10">
+                  회사소개 <ArrowRight className="ml-2 w-4 h-4" />
+                </Button>
+              </a>
             </div>
           </div>
         </div>
@@ -149,9 +155,11 @@ export default function Home() {
               <p className="text-gray-700 mb-6 leading-relaxed">
                 대기업의 친환경 제품 개발을 지원하며, 글로벌 표준의 품질을 제공합니다.
               </p>
-              <Button className="bg-blue-700 hover:bg-blue-800">
-                자세히 알아보기
-              </Button>
+              <a href="/about">
+                <Button className="bg-blue-700 hover:bg-blue-800">
+                  자세히 알아보기
+                </Button>
+              </a>
             </div>
             <div className="flex items-center justify-center p-8 bg-gray-50 rounded-xl">
               <img 
@@ -180,9 +188,11 @@ export default function Home() {
                 Post-Consumer Recycled 폴리프로필렌을 기반으로 한 고성능 컴파운드입니다.
                 자동차 내장재, 가전 제품, 전자 부품 등에 광범위하게 적용됩니다.
               </p>
-              <Button variant="ghost" className="text-blue-700">
-                자세히 <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
+              <a href="/products">
+                <Button variant="ghost" className="text-blue-700">
+                  자세히 <ArrowRight className="ml-2 w-4 h-4" />
+                </Button>
+              </a>
             </Card>
 
             <Card className="p-8 hover:shadow-lg transition">
@@ -194,9 +204,11 @@ export default function Home() {
                 고강도 폴리아마이드 재생 소재로 자동차 부품, 기계 부품, 산업용 제품에 사용됩니다.
                 우수한 내열성과 기계적 강도를 제공합니다.
               </p>
-              <Button variant="ghost" className="text-blue-700">
-                자세히 <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
+              <a href="/products">
+                <Button variant="ghost" className="text-blue-700">
+                  자세히 <ArrowRight className="ml-2 w-4 h-4" />
+                </Button>
+              </a>
             </Card>
 
             <Card className="p-8 hover:shadow-lg transition">
@@ -208,9 +220,11 @@ export default function Home() {
                 재생 폴리카보네이트 소재로 투명성과 강도가 필요한 제품에 적합합니다.
                 전자제품 외관, 조명 부품, 광학 부품 등에 사용됩니다.
               </p>
-              <Button variant="ghost" className="text-blue-700">
-                자세히 <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
+              <a href="/products">
+                <Button variant="ghost" className="text-blue-700">
+                  자세히 <ArrowRight className="ml-2 w-4 h-4" />
+                </Button>
+              </a>
             </Card>
           </div>
 
