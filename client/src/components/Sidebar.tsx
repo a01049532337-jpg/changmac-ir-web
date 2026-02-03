@@ -22,7 +22,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
     { label: "회사소개", href: "/about" },
     { label: "사업소개", href: "/products" },
     { label: "지속가능경영", href: "/sustainability" },
-    { label: "IR", href: "#ir" },
+    { label: "IR", href: "/ir" },
     { label: "채용공고", href: "#careers" },
   ];
 
