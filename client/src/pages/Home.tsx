@@ -1,21 +1,41 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, Leaf, Zap, Globe, Award, CheckCircle } from "lucide-react";
+import { ArrowRight, Leaf, Zap, Globe, Award, CheckCircle, Menu } from "lucide-react";
+import { useState } from "react";
+import Sidebar from "@/components/Sidebar";
 
 export default function Home() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-white">
+      {/* Sidebar */}
+      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-white border-b border-gray-200">
+      <nav className="sticky top-0 z-40 bg-white border-b border-gray-200">
         <div className="container flex items-center justify-between h-16">
           <div className="text-2xl font-bold text-blue-700">창맥</div>
+          
+          {/* Desktop Menu */}
           <div className="hidden md:flex gap-8">
             <a href="#about" className="text-gray-700 hover:text-blue-700 transition">회사소개</a>
-            <a href="#products" className="text-gray-700 hover:text-blue-700 transition">제품</a>
-            <a href="#technology" className="text-gray-700 hover:text-blue-700 transition">기술</a>
-            <a href="#contact" className="text-gray-700 hover:text-blue-700 transition">연락처</a>
+            <a href="#products" className="text-gray-700 hover:text-blue-700 transition">사업소개</a>
+            <a href="#technology" className="text-gray-700 hover:text-blue-700 transition">지속가능경영</a>
+            <a href="#ir" className="text-gray-700 hover:text-blue-700 transition">IR</a>
+            <a href="#careers" className="text-gray-700 hover:text-blue-700 transition">채용공고</a>
           </div>
-          <Button className="bg-blue-700 hover:bg-blue-800">문의하기</Button>
+
+          {/* Mobile Hamburger Menu */}
+          <button
+            onClick={() => setSidebarOpen(true)}
+            className="md:hidden p-2 hover:bg-gray-100 rounded-lg transition"
+          >
+            <Menu className="w-6 h-6 text-gray-700" />
+          </button>
+
+          {/* Desktop CTA Button */}
+          <Button className="hidden md:block bg-blue-700 hover:bg-blue-800">문의하기</Button>
         </div>
       </nav>
 
@@ -82,7 +102,7 @@ export default function Home() {
       <section id="products" className="py-16 md:py-24">
         <div className="container">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            주요 제품
+            사업소개
           </h2>
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <Card className="p-8 hover:shadow-lg transition">
@@ -165,8 +185,61 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Sustainability Section */}
+      <section id="sustainability" className="py-16 md:py-24 bg-gray-50">
+        <div className="container">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            지속가능경영
+          </h2>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="bg-gradient-to-br from-green-100 to-blue-100 rounded-lg h-80 flex items-center justify-center">
+              <img 
+                src="/images/roadmap-visual.png" 
+                alt="지속가능경영" 
+                className="w-full h-full object-cover rounded-lg"
+              />
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-blue-700 mb-6">
+                환경과 사회를 생각하는 기업
+              </h3>
+              <div className="space-y-4">
+                <div className="flex gap-3">
+                  <CheckCircle className="w-6 h-6 text-lime-600 flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-bold mb-1">탄소 중립 달성</h4>
+                    <p className="text-gray-700 text-sm">2030년까지 탄소 중립 목표 추진</p>
+                  </div>
+                </div>
+                <div className="flex gap-3">
+                  <CheckCircle className="w-6 h-6 text-lime-600 flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-bold mb-1">폐기물 감량</h4>
+                    <p className="text-gray-700 text-sm">재생 플라스틱 활용으로 폐기물 최소화</p>
+                  </div>
+                </div>
+                <div className="flex gap-3">
+                  <CheckCircle className="w-6 h-6 text-lime-600 flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-bold mb-1">사회공헌</h4>
+                    <p className="text-gray-700 text-sm">지역사회 발전과 고용 창출에 기여</p>
+                  </div>
+                </div>
+                <div className="flex gap-3">
+                  <CheckCircle className="w-6 h-6 text-lime-600 flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-bold mb-1">투명한 경영</h4>
+                    <p className="text-gray-700 text-sm">윤리 경영과 투명한 정보 공개</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Technology Section */}
-      <section id="technology" className="py-16 md:py-24 bg-gray-50">
+      <section id="technology" className="py-16 md:py-24">
         <div className="container">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             기술 & 인증
@@ -221,6 +294,74 @@ export default function Home() {
                 className="w-full h-full object-cover rounded-lg"
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* IR Section */}
+      <section id="ir" className="py-16 md:py-24 bg-blue-50">
+        <div className="container">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            IR (투자자 정보)
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="p-8 hover:shadow-lg transition">
+              <h3 className="text-xl font-bold mb-4 text-blue-700">재무 정보</h3>
+              <p className="text-gray-600 mb-6">
+                (주)창맥의 최신 재무 현황과 성장 추이를 확인하세요.
+              </p>
+              <Button variant="outline" className="w-full">
+                자세히 보기
+              </Button>
+            </Card>
+
+            <Card className="p-8 hover:shadow-lg transition">
+              <h3 className="text-xl font-bold mb-4 text-blue-700">기업 가치</h3>
+              <p className="text-gray-600 mb-6">
+                지속적인 성장으로 기업 가치를 높여나가고 있습니다.
+              </p>
+              <Button variant="outline" className="w-full">
+                자세히 보기
+              </Button>
+            </Card>
+
+            <Card className="p-8 hover:shadow-lg transition">
+              <h3 className="text-xl font-bold mb-4 text-blue-700">투자 기회</h3>
+              <p className="text-gray-600 mb-6">
+                순환경제 시장의 성장 기회에 함께하세요.
+              </p>
+              <Button variant="outline" className="w-full">
+                문의하기
+              </Button>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Careers Section */}
+      <section id="careers" className="py-16 md:py-24 bg-gray-50">
+        <div className="container">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            채용공고
+          </h2>
+          <div className="max-w-2xl mx-auto">
+            <Card className="p-8">
+              <h3 className="text-2xl font-bold mb-4 text-blue-700">
+                함께 성장할 인재를 찾습니다
+              </h3>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                (주)창맥은 순환경제의 미래를 만들어갈 열정적인 인재를 모집하고 있습니다.
+                신소재 기술, 공정 기술, 영업, 관리 등 다양한 분야에서 경력직과 신입을 채용하고 있습니다.
+              </p>
+              <div className="space-y-3 mb-6">
+                <p className="text-gray-700"><strong>근무지:</strong> 경북 성주군 선남면</p>
+                <p className="text-gray-700"><strong>근무형태:</strong> 정규직</p>
+                <p className="text-gray-700"><strong>복리후생:</strong> 경쟁력 있는 급여 및 복리후생</p>
+              </div>
+              <Button className="w-full bg-blue-700 hover:bg-blue-800">
+                채용공고 보기
+              </Button>
+            </Card>
           </div>
         </div>
       </section>
