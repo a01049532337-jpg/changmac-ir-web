@@ -338,9 +338,9 @@ export default function Home() {
             고품질 재생수지로 지속가능한 미래를 만드는 파트너
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="mailto:changmaec1@naver.com">
-              <Button className="bg-lime-400 text-blue-900 hover:bg-lime-500 text-lg px-8 py-3">
-                제품 문의
+            <a href="/contact">
+              <Button className="bg-lime-400 text-blue-900 hover:bg-lime-500 text-lg px-8 py-6">
+                문의하기
               </Button>
             </a>
             <a href="/about">

@@ -9,6 +9,7 @@ import About from "./pages/About";
 import Sustainability from "./pages/Sustainability";
 import Products from "./pages/Products";
 import IR from "./pages/IR";
+import Contact from "./pages/Contact";
 
 
 function Router() {
@@ -19,6 +20,7 @@ function Router() {
       <Route path={"/sustainability"} component={Sustainability} />
       <Route path={"/products"} component={Products} />
       <Route path={"/ir"} component={IR} />
+      <Route path={"/contact"} component={Contact} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
