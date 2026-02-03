@@ -84,32 +84,7 @@ export default function Sustainability() {
     }
   ];
 
-  const sustainabilityMetrics = [
-    {
-      icon: Droplet,
-      metric: "물 사용량 감축",
-      value: "40%",
-      description: "폐수 재활용 시스템 도입으로 물 사용량 감축"
-    },
-    {
-      icon: Zap,
-      metric: "에너지 효율",
-      value: "35%",
-      description: "스마트공장 기술로 에너지 소비 효율화"
-    },
-    {
-      icon: Recycle,
-      metric: "폐기물 재활용율",
-      value: "95%",
-      description: "생산 과정의 폐기물 95% 이상 재활용"
-    },
-    {
-      icon: TrendingUp,
-      metric: "탄소 감축",
-      value: "500톤/년",
-      description: "2027년까지 연간 CO₂ 500톤 이상 감축 목표"
-    }
-  ];
+
 
   const socialInitiatives = [
     {
@@ -198,28 +173,7 @@ export default function Sustainability() {
               );
             })}
           </div>
-          <div className="bg-green-50 rounded-lg p-8 border border-green-200">
-            <h3 className="text-2xl font-bold text-green-800 mb-4">2030 탄소중립 목표</h3>
-            <p className="text-gray-700 leading-relaxed mb-6">
-              (주)창맥은 2030년까지 탄소중립을 달성하기 위해 재생 플라스틱 생산 공정의 
-              탄소 배출량을 50% 감축하고, 재생에너지 사용 비율을 70% 이상으로 확대할 계획입니다.
-              이를 통해 순환경제의 진정한 리더로서의 역할을 다하겠습니다.
-            </p>
-            <div className="flex gap-4">
-              <div className="flex-1">
-                <p className="text-sm text-gray-600 mb-1">탄소 배출 감축</p>
-                <p className="text-3xl font-bold text-green-700">50%</p>
-              </div>
-              <div className="flex-1">
-                <p className="text-sm text-gray-600 mb-1">재생에너지 비율</p>
-                <p className="text-3xl font-bold text-green-700">70%</p>
-              </div>
-              <div className="flex-1">
-                <p className="text-sm text-gray-600 mb-1">목표 연도</p>
-                <p className="text-3xl font-bold text-green-700">2030</p>
-              </div>
-            </div>
-          </div>
+
         </div>
       </section>
 
@@ -321,29 +275,7 @@ export default function Sustainability() {
         </div>
       </section>
 
-      {/* Sustainability Metrics Section */}
-      <section className="py-16 md:py-24 bg-gray-50">
-        <div className="container">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            지속가능경영 성과
-          </h2>
-          <div className="grid md:grid-cols-4 gap-6">
-            {sustainabilityMetrics.map((metric, idx) => {
-              const Icon = metric.icon;
-              return (
-                <Card key={idx} className="p-6 text-center hover:shadow-lg transition">
-                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
-                    <Icon className="w-6 h-6 text-green-700" />
-                  </div>
-                  <p className="text-sm text-gray-600 mb-2">{metric.metric}</p>
-                  <p className="text-3xl font-bold text-green-700 mb-3">{metric.value}</p>
-                  <p className="text-xs text-gray-600">{metric.description}</p>
-                </Card>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+
 
       {/* Social Initiatives Section */}
       <section className="py-16 md:py-24">
@@ -398,7 +330,7 @@ export default function Sustainability() {
             지속가능한 미래를 만들어가겠습니다.
           </p>
           <Button className="bg-lime-400 text-green-900 hover:bg-lime-500 text-lg px-8 py-6">
-            지속가능경영 보고서 다운로드
+            지금 문의하기
           </Button>
         </div>
       </section>
