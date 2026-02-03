@@ -125,21 +125,7 @@ export default function IR() {
         </div>
       </section>
 
-      {/* Performance Metrics */}
-      <section className="py-20">
-        <div className="container">
-          <h2 className="text-4xl font-bold mb-16 text-center">핵심 성과 지표</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {performanceMetrics.map((metric, idx) => (
-              <div key={idx} className="bg-gradient-to-br from-blue-50 to-lime-50 rounded-xl p-8 text-center border-2 border-blue-200 hover:border-lime-400 transition">
-                <p className="text-sm text-gray-600 mb-3 font-semibold">{metric.label}</p>
-                <p className={`text-4xl font-bold ${metric.color} mb-2`}>{metric.value}</p>
-                <div className="h-1 bg-gradient-to-r from-blue-400 to-lime-400 rounded-full"></div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* Certifications & Awards */}
       <section className="py-20 bg-gray-50">

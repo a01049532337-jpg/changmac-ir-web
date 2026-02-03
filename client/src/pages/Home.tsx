@@ -282,10 +282,12 @@ export default function Home() {
             지속가능경영
           </h2>
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="bg-gradient-to-br from-green-100 to-blue-100 rounded-lg h-80 flex items-center justify-center">
-              <div className="text-center text-gray-600">
-                <p className="font-semibold">지속가능경영 이미지</p>
-              </div>
+            <div className="bg-gradient-to-br from-green-100 to-blue-100 rounded-lg h-80 flex items-center justify-center overflow-hidden">
+              <img 
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663320104260/pYtJNSYKPyyBRpHm.png" 
+                alt="ESG 지속가능경영" 
+                className="w-full h-full object-cover"
+              />
             </div>
             <div>
               <h3 className="text-2xl font-bold text-blue-700 mb-6">
