@@ -20,7 +20,7 @@ export default function Home() {
           {/* Desktop Menu */}
           <div className="hidden md:flex gap-8">
             <a href="/about" className="text-gray-700 hover:text-blue-700 transition">회사소개</a>
-            <a href="#products" className="text-gray-700 hover:text-blue-700 transition">사업소개</a>
+            <a href="/products" className="text-gray-700 hover:text-blue-700 transition">사업소개</a>
             <a href="/sustainability" className="text-gray-700 hover:text-blue-700 transition">지속가능경영</a>
             <a href="#ir" className="text-gray-700 hover:text-blue-700 transition">IR</a>
             <a href="#careers" className="text-gray-700 hover:text-blue-700 transition">채용공고</a>
