@@ -1,4 +1,5 @@
 import { TrendingUp, Award, Zap, Target, CheckCircle, ArrowRight, BarChart3 } from "lucide-react";
+import Footer from "@/components/Footer";
 
 export default function IR() {
   const investmentHighlights = [
@@ -302,6 +303,8 @@ export default function IR() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }

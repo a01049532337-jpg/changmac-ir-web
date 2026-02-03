@@ -3,6 +3,7 @@ import { Card } from "@/components/ui/card";
 import { ArrowRight, Leaf, Zap, Globe, Award, CheckCircle, Menu, Lightbulb, Cpu, Leaf as LeafIcon } from "lucide-react";
 import { useState } from "react";
 import Sidebar from "@/components/Sidebar";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -335,15 +336,21 @@ export default function Home() {
             고품질 재생수지로 지속가능한 미래를 만드는 파트너
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-lime-400 text-blue-900 hover:bg-lime-500 text-lg px-8 py-3">
-              제품 문의
-            </Button>
-            <Button variant="outline" className="border-white text-white hover:bg-white/10 text-lg px-8 py-3">
-              회사소개 보기
-            </Button>
+            <a href="mailto:changmaec1@naver.com">
+              <Button className="bg-lime-400 text-blue-900 hover:bg-lime-500 text-lg px-8 py-3">
+                제품 문의
+              </Button>
+            </a>
+            <a href="/about">
+              <Button variant="outline" className="border-white text-white hover:bg-white/10 text-lg px-8 py-3">
+                회사소개 보기
+              </Button>
+            </a>
           </div>
         </div>
       </section>
+      
+      <Footer />
     </div>
   );
 }

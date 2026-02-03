@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Leaf, Zap, Globe, TrendingUp, Target, CheckCircle, Droplet, Recycle } from "lucide-react";
+import { Leaf, Zap, Globe, TrendingUp, Target, CheckCircle, Droplet, Recycle, Users } from "lucide-react";
+import Footer from "@/components/Footer";
 
 export default function Sustainability() {
   const esgPillars = [
@@ -345,22 +346,9 @@ export default function Sustainability() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-gray-400 py-8">
-        <div className="container">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p>&copy; 2026 (주)창맥. All rights reserved.</p>
-            <div className="flex gap-6 mt-4 md:mt-0">
-              <a href="#" className="hover:text-white transition">개인정보처리방침</a>
-              <a href="#" className="hover:text-white transition">이용약관</a>
-              <a href="#" className="hover:text-white transition">사이트맵</a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
 
-// Import Users icon (missing from lucide-react destructuring)
-import { Users } from "lucide-react";
+
