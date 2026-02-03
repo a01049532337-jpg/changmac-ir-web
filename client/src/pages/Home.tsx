@@ -84,14 +84,6 @@ export default function Home() {
                 이축압출기(Twin-Screw Extruder) 설비를 통한 <strong>균일한 물성 구현 기술</strong>로 
                 신재(Virgin)급 품질의 재생수지를 제조합니다.
               </p>
-              <div className="bg-blue-50 rounded-lg p-4">
-                <p className="text-sm text-gray-600 font-semibold mb-2">주요 성과</p>
-                <ul className="space-y-2 text-sm text-gray-700">
-                  <li>• 생산 효율 35% 향상</li>
-                  <li>• 품질 편차 50% 감소</li>
-                  <li>• 신재급 품질 100% 구현</li>
-                </ul>
-              </div>
             </div>
 
             {/* Patents */}
@@ -161,10 +153,12 @@ export default function Home() {
                 자세히 알아보기
               </Button>
             </div>
-            <div className="bg-gradient-to-br from-blue-100 to-lime-100 rounded-lg h-80 flex items-center justify-center">
-              <div className="text-center text-gray-600">
-                <p className="font-semibold">회사 이미지</p>
-              </div>
+            <div className="flex items-center justify-center p-8 bg-gray-50 rounded-xl">
+              <img 
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663320104260/TXZUbWyeLOLNEyrb.png" 
+                alt="(주)창맥 로고" 
+                className="max-w-full h-auto max-h-64 object-contain"
+              />
             </div>
           </div>
         </div>
@@ -220,36 +214,45 @@ export default function Home() {
             </Card>
           </div>
 
-          {/* Product Features */}
-          <div className="bg-blue-50 rounded-lg p-8">
-            <h3 className="text-2xl font-bold mb-6 text-center">제품 특징</h3>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="flex gap-3">
-                <CheckCircle className="w-6 h-6 text-lime-600 flex-shrink-0" />
-                <div>
-                  <h4 className="font-bold mb-1">국제 품질 기준 충족</h4>
-                  <p className="text-gray-700 text-sm">ISO 9001 인증으로 일관된 고품질 제품 보증</p>
+          {/* Product Features with Materials Image */}
+          <div className="grid md:grid-cols-2 gap-8 items-center bg-white rounded-xl overflow-hidden shadow-lg">
+            <div className="h-full min-h-[300px]">
+              <img 
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663320104260/lmuUhRDlyrXsdAHq.jpeg" 
+                alt="고품질 컴파운드 샘플" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="p-8">
+              <h3 className="text-2xl font-bold mb-6 text-blue-700">제품 특징</h3>
+              <div className="space-y-6">
+                <div className="flex gap-3">
+                  <CheckCircle className="w-6 h-6 text-lime-600 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-bold mb-1">국제 품질 기준 충족</h4>
+                    <p className="text-gray-700 text-sm">ISO 9001 인증으로 일관된 고품질 제품 보증</p>
+                  </div>
                 </div>
-              </div>
-              <div className="flex gap-3">
-                <CheckCircle className="w-6 h-6 text-lime-600 flex-shrink-0" />
-                <div>
-                  <h4 className="font-bold mb-1">환경 친화적</h4>
-                  <p className="text-gray-700 text-sm">폐플라스틱 재활용으로 순환경제 실현</p>
+                <div className="flex gap-3">
+                  <CheckCircle className="w-6 h-6 text-lime-600 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-bold mb-1">환경 친화적</h4>
+                    <p className="text-gray-700 text-sm">폐플라스틱 재활용으로 순환경제 실현</p>
+                  </div>
                 </div>
-              </div>
-              <div className="flex gap-3">
-                <CheckCircle className="w-6 h-6 text-lime-600 flex-shrink-0" />
-                <div>
-                  <h4 className="font-bold mb-1">맞춤형 솔루션</h4>
-                  <p className="text-gray-700 text-sm">고객 요구에 맞춘 특화된 제품 개발</p>
+                <div className="flex gap-3">
+                  <CheckCircle className="w-6 h-6 text-lime-600 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-bold mb-1">맞춤형 솔루션</h4>
+                    <p className="text-gray-700 text-sm">고객 요구에 맞춘 특화된 제품 개발</p>
+                  </div>
                 </div>
-              </div>
-              <div className="flex gap-3">
-                <CheckCircle className="w-6 h-6 text-lime-600 flex-shrink-0" />
-                <div>
-                  <h4 className="font-bold mb-1">안정적 공급</h4>
-                  <p className="text-gray-700 text-sm">스마트공장으로 안정적인 생산 및 배송</p>
+                <div className="flex gap-3">
+                  <CheckCircle className="w-6 h-6 text-lime-600 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-bold mb-1">안정적 공급</h4>
+                    <p className="text-gray-700 text-sm">스마트공장으로 안정적인 생산 및 배송</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -258,7 +261,7 @@ export default function Home() {
       </section>
 
       {/* Sustainability Section */}
-      <section id="sustainability" className="py-16 md:py-24 bg-gray-50">
+      <section id="sustainability" className="py-16 md:py-24">
         <div className="container">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             지속가능경영
