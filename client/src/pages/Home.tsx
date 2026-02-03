@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, Leaf, Zap, Globe, Award, CheckCircle, Menu } from "lucide-react";
+import { ArrowRight, Leaf, Zap, Globe, Award, CheckCircle, Menu, Lightbulb, Cpu, Leaf as LeafIcon } from "lucide-react";
 import { useState } from "react";
 import Sidebar from "@/components/Sidebar";
 
@@ -39,16 +39,21 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-blue-700 to-blue-900 text-white py-20 md:py-32">
-        <div className="container">
+      {/* Hero Section with Factory Background */}
+      <section className="relative bg-cover bg-center text-white py-20 md:py-40 overflow-hidden" style={{backgroundImage: 'url(https://files.manuscdn.com/user_upload_by_module/session_file/310519663320104260/hHPQvQTOiOJeVxif.jpg)'}}>
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/50"></div>
+        
+        <div className="container relative z-10">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
               순환경제의 리더, 창맥
             </h1>
-            <p className="text-lg md:text-xl text-blue-100 mb-8">
+            <p className="text-lg md:text-xl text-blue-100 mb-3">
               고품질의 재생 플라스틱 소재(PP, PC, PA6, PA66)로 지속가능한 미래를 만들어갑니다.
-              대기업을 위한 신뢰할 수 있는 파트너입니다.
+            </p>
+            <p className="text-base md:text-lg text-lime-300 font-semibold mb-8">
+              16년의 업력, 특허 기술 기반의 고품질 재생수지 전문 제조 기업
             </p>
             <div className="flex gap-4">
               <Button className="bg-lime-400 text-blue-900 hover:bg-lime-500">
@@ -62,8 +67,77 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Core Competencies Section */}
+      <section className="py-16 md:py-24 bg-gray-50">
+        <div className="container">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
+            핵심 역량
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Technology */}
+            <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition border-t-4 border-blue-700">
+              <div className="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                <Cpu className="w-8 h-8 text-blue-700" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">기술력</h3>
+              <p className="text-gray-700 mb-4 leading-relaxed">
+                이축압출기(Twin-Screw Extruder) 설비를 통한 <strong>균일한 물성 구현 기술</strong>로 
+                신재(Virgin)급 품질의 재생수지를 제조합니다.
+              </p>
+              <div className="bg-blue-50 rounded-lg p-4">
+                <p className="text-sm text-gray-600 font-semibold mb-2">주요 성과</p>
+                <ul className="space-y-2 text-sm text-gray-700">
+                  <li>• 생산 효율 35% 향상</li>
+                  <li>• 품질 편차 50% 감소</li>
+                  <li>• 신재급 품질 100% 구현</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Patents */}
+            <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition border-t-4 border-lime-600">
+              <div className="w-14 h-14 bg-lime-100 rounded-lg flex items-center justify-center mb-6">
+                <Award className="w-8 h-8 text-lime-600" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">특허 기술</h3>
+              <p className="text-gray-700 mb-4 leading-relaxed">
+                차별화된 재생수지 배합 기술과 공정 혁신으로 
+                <strong>2건의 핵심 특허</strong>를 보유하고 있습니다.
+              </p>
+              <div className="bg-lime-50 rounded-lg p-4">
+                <p className="text-sm text-gray-600 font-semibold mb-3">보유 특허</p>
+                <div className="space-y-2 text-sm text-gray-700">
+                  <p>• 특허번호 10-2021-0165852</p>
+                  <p>• 특허번호 10-2014-0027148</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Eco-Friendly */}
+            <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition border-t-4 border-green-600">
+              <div className="w-14 h-14 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                <LeafIcon className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">친환경 경영</h3>
+              <p className="text-gray-700 mb-4 leading-relaxed">
+                <strong>탄소중립 사업화 지원사업</strong> 선정으로 
+                ESG 경영을 실천하고 있습니다.
+              </p>
+              <div className="bg-green-50 rounded-lg p-4">
+                <p className="text-sm text-gray-600 font-semibold mb-3">ESG 성과</p>
+                <div className="space-y-2 text-sm text-gray-700">
+                  <p>• 2025~2027 탄소중립 사업화 지원사업 선정</p>
+                  <p>• 화학적 순환 자원화 기술 개발 완료</p>
+                  <p>• 저탄소 공정 모델 확립</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
-      <section id="about" className="py-16 md:py-24 bg-gray-50">
+      <section id="about" className="py-16 md:py-24">
         <div className="container">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             (주)창맥에 대해
@@ -88,18 +162,16 @@ export default function Home() {
               </Button>
             </div>
             <div className="bg-gradient-to-br from-blue-100 to-lime-100 rounded-lg h-80 flex items-center justify-center">
-              <img 
-                src="/images/market-opportunity.jpg" 
-                alt="순환경제" 
-                className="w-full h-full object-cover rounded-lg"
-              />
+              <div className="text-center text-gray-600">
+                <p className="font-semibold">회사 이미지</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Products Section */}
-      <section id="products" className="py-16 md:py-24">
+      <section id="products" className="py-16 md:py-24 bg-gray-50">
         <div className="container">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             사업소개
@@ -193,11 +265,9 @@ export default function Home() {
           </h2>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="bg-gradient-to-br from-green-100 to-blue-100 rounded-lg h-80 flex items-center justify-center">
-              <img 
-                src="/images/roadmap-visual.png" 
-                alt="지속가능경영" 
-                className="w-full h-full object-cover rounded-lg"
-              />
+              <div className="text-center text-gray-600">
+                <p className="font-semibold">지속가능경영 이미지</p>
+              </div>
             </div>
             <div>
               <h3 className="text-2xl font-bold text-blue-700 mb-6">
@@ -238,214 +308,25 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Technology Section */}
-      <section id="technology" className="py-16 md:py-24">
-        <div className="container">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            기술 & 인증
-          </h2>
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="space-y-6">
-              <div className="flex gap-4">
-                <Award className="w-6 h-6 text-lime-600 flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="font-bold text-lg mb-2">스마트공장 인증</h3>
-                  <p className="text-gray-600">
-                    스마트공장 인증 확인서 획득으로 최첨단 제조 기술을 보유한 기업임을 입증합니다.
-                    자동화 설비와 데이터 기반 공정 관리로 효율성을 극대화합니다.
-                  </p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <Zap className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="font-bold text-lg mb-2">ISO 9001 인증</h3>
-                  <p className="text-gray-600">
-                    국제 품질 경영 시스템 인증으로 일관된 고품질 제품 생산을 보장합니다.
-                    엄격한 품질 관리 프로세스를 통해 고객 만족도를 극대화합니다.
-                  </p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <Leaf className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="font-bold text-lg mb-2">소재부품장비 전문기업</h3>
-                  <p className="text-gray-600">
-                    정부 인증 소재부품장비 전문기업으로 산업 고도화에 기여하는 핵심 기업입니다.
-                    국가 정책 지원 대상 기업으로 선정되어 기술 개발을 지속 추진 중입니다.
-                  </p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <Globe className="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="font-bold text-lg mb-2">특허 기술</h3>
-                  <p className="text-gray-600">
-                    재생 플라스틱 소재 개발 및 공정 기술에 대한 특허를 보유하고 있으며,
-                    지속적인 R&D를 통해 혁신적인 기술을 개발하고 있습니다.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="bg-gradient-to-br from-lime-100 to-blue-100 rounded-lg h-80 flex items-center justify-center">
-              <img 
-                src="/images/hero-background.jpg" 
-                alt="기술" 
-                className="w-full h-full object-cover rounded-lg"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* IR Section */}
-      <section id="ir" className="py-16 md:py-24 bg-blue-50">
-        <div className="container">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            IR (투자자 정보)
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="p-8 hover:shadow-lg transition">
-              <h3 className="text-xl font-bold mb-4 text-blue-700">재무 정보</h3>
-              <p className="text-gray-600 mb-6">
-                (주)창맥의 최신 재무 현황과 성장 추이를 확인하세요.
-              </p>
-              <Button variant="outline" className="w-full">
-                자세히 보기
-              </Button>
-            </Card>
-
-            <Card className="p-8 hover:shadow-lg transition">
-              <h3 className="text-xl font-bold mb-4 text-blue-700">기업 가치</h3>
-              <p className="text-gray-600 mb-6">
-                지속적인 성장으로 기업 가치를 높여나가고 있습니다.
-              </p>
-              <Button variant="outline" className="w-full">
-                자세히 보기
-              </Button>
-            </Card>
-
-            <Card className="p-8 hover:shadow-lg transition">
-              <h3 className="text-xl font-bold mb-4 text-blue-700">투자 기회</h3>
-              <p className="text-gray-600 mb-6">
-                순환경제 시장의 성장 기회에 함께하세요.
-              </p>
-              <Button variant="outline" className="w-full">
-                문의하기
-              </Button>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Careers Section */}
-      <section id="careers" className="py-16 md:py-24 bg-gray-50">
-        <div className="container">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            채용공고
-          </h2>
-          <div className="max-w-2xl mx-auto">
-            <Card className="p-8">
-              <h3 className="text-2xl font-bold mb-4 text-blue-700">
-                함께 성장할 인재를 찾습니다
-              </h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                (주)창맥은 순환경제의 미래를 만들어갈 열정적인 인재를 모집하고 있습니다.
-                신소재 기술, 공정 기술, 영업, 관리 등 다양한 분야에서 경력직과 신입을 채용하고 있습니다.
-              </p>
-              <div className="space-y-3 mb-6">
-                <p className="text-gray-700"><strong>근무지:</strong> 경북 성주군 선남면</p>
-                <p className="text-gray-700"><strong>근무형태:</strong> 정규직</p>
-                <p className="text-gray-700"><strong>복리후생:</strong> 경쟁력 있는 급여 및 복리후생</p>
-              </div>
-              <Button className="w-full bg-blue-700 hover:bg-blue-800">
-                채용공고 보기
-              </Button>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-16 md:py-24 bg-blue-700 text-white">
         <div className="container text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            창맥과 함께 지속가능한 미래를 만들어보세요
+            (주)창맥과 함께하세요
           </h2>
-          <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
-            고품질의 재생 플라스틱 소재로 당신의 제품을 한 단계 업그레이드하세요.
-            신뢰할 수 있는 파트너, 창맥입니다.
+          <p className="text-lg mb-8 opacity-90">
+            고품질 재생수지로 지속가능한 미래를 만드는 파트너
           </p>
-          <Button className="bg-lime-400 text-blue-900 hover:bg-lime-500 text-lg px-8 py-6">
-            지금 문의하기
-          </Button>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section id="contact" className="py-16 md:py-24 bg-gray-50">
-        <div className="container">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            연락처
-          </h2>
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-xl font-bold mb-6">회사 정보</h3>
-              <div className="space-y-4 text-gray-700">
-                <p><strong>회사명:</strong> (주)창맥</p>
-                <p><strong>주소:</strong> 경북 성주군 선남면 선노로 55-36</p>
-                <p><strong>전화:</strong> 054-931-0718</p>
-                <p><strong>팩스:</strong> 054-931-0719</p>
-                <p><strong>이메일:</strong> changmaec1@naver.com</p>
-                <p><strong>설립:</strong> 2010년 10월</p>
-                <p><strong>주요 제품:</strong> PP, PC, PA6, PA66 재생 컴파운드</p>
-              </div>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold mb-6">문의 양식</h3>
-              <form className="space-y-4">
-                <input 
-                  type="text" 
-                  placeholder="이름" 
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-700"
-                />
-                <input 
-                  type="email" 
-                  placeholder="이메일" 
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-700"
-                />
-                <input 
-                  type="tel" 
-                  placeholder="전화번호" 
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-700"
-                />
-                <textarea 
-                  placeholder="문의 내용" 
-                  rows={4}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-700"
-                />
-                <Button className="w-full bg-blue-700 hover:bg-blue-800">
-                  문의 보내기
-                </Button>
-              </form>
-            </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button className="bg-lime-400 text-blue-900 hover:bg-lime-500 text-lg px-8 py-3">
+              제품 문의
+            </Button>
+            <Button variant="outline" className="border-white text-white hover:bg-white/10 text-lg px-8 py-3">
+              회사소개 보기
+            </Button>
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-900 text-gray-400 py-8">
-        <div className="container">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p>&copy; 2026 (주)창맥. All rights reserved.</p>
-            <div className="flex gap-6 mt-4 md:mt-0">
-              <a href="#" className="hover:text-white transition">개인정보처리방침</a>
-              <a href="#" className="hover:text-white transition">이용약관</a>
-              <a href="#" className="hover:text-white transition">사이트맵</a>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
