@@ -21,7 +21,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   const menuItems = [
     { label: "회사소개", href: "/about" },
     { label: "사업소개", href: "#products" },
-    { label: "지속가능경영", href: "#sustainability" },
+    { label: "지속가능경영", href: "/sustainability" },
     { label: "IR", href: "#ir" },
     { label: "채용공고", href: "#careers" },
   ];
