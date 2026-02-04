@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Target, Lightbulb, Users, Zap } from "lucide-react";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 
 export default function About() {
   const coreValues = [
@@ -65,6 +66,10 @@ export default function About() {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO 
+        title="회사소개" 
+        description="(주)창맥의 기업 소개, CEO 인사말, 연혁 및 핵심 가치를 소개합니다. 16년 업력의 기술력으로 완벽한 품질을 약속합니다." 
+      />
       {/* Navigation */}
       <nav className="sticky top-0 z-40 bg-white border-b border-gray-200">
         <div className="container flex items-center justify-between h-16">
@@ -178,7 +183,7 @@ export default function About() {
             <div className="space-y-6">
               <div>
                 <h3 className="text-xl font-bold text-blue-700 mb-2">주요 사업</h3>
-                <p className="text-gray-700">재생 플라스틱 소재(PP, PC, PA6, PA66) 제조 및 판매</p>
+                <p className="text-gray-700">재생 플라스틱 소재 제조 및 판매</p>
               </div>
               <div>
                 <h3 className="text-xl font-bold text-blue-700 mb-2">주요 인증</h3>

@@ -4,12 +4,17 @@ import { ArrowRight, Leaf, Zap, Globe, Award, CheckCircle, Menu, Lightbulb, Cpu,
 import { useState } from "react";
 import Sidebar from "@/components/Sidebar";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 
 export default function Home() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO 
+        title="홈" 
+        description="고품질 재생 플라스틱 소재 전문 제조 기업 (주)창맥입니다. 순환경제의 리더로서 지속가능한 미래를 만들어갑니다." 
+      />
       {/* Sidebar */}
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
 
@@ -53,7 +58,7 @@ export default function Home() {
               순환경제의 리더, 창맥
             </h1>
             <p className="text-lg md:text-xl text-blue-100 mb-3">
-              고품질의 재생 플라스틱 소재(PP, PC, PA6, PA66)로 지속가능한 미래를 만들어갑니다.
+              고품질의 재생 플라스틱 소재로 지속가능한 미래를 만들어갑니다.
             </p>
             <p className="text-base md:text-lg text-lime-300 font-semibold mb-8">
               16년의 업력, 특허 기술 기반의 고품질 재생수지 전문 제조 기업
@@ -147,7 +152,7 @@ export default function Home() {
                 재생 플라스틱의 미래를 선도합니다
               </h3>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                (주)창맥은 2010년 설립 이후 고품질의 재생 플라스틱 소재(PP, PC, PA6, PA66) 제조에 특화된 기업입니다.
+                (주)창맥은 2010년 설립 이후 고품질의 재생 플라스틱 소재 제조에 특화된 기업입니다.
                 신소재 기술과 혁신적인 공정으로 지속가능한 순환경제 실현에 앞장서고 있습니다.
               </p>
               <p className="text-gray-700 mb-4 leading-relaxed">
